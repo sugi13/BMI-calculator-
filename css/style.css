@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+.container-1 img{
+    width: 80px;
+
+}
+.container-1 {
+    width: 50%;
+    color: white;
+    background-color:#109FC8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+.container-1 h1{
+    letter-spacing: 15px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.img{
+  margin: 20px;
+  background: none;
+  border: none;  
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    width: 50%;
+    padding: 50px;
+    background:#87C7FC;
+    border-radius: 10px;
+}
+.form input{
+    margin: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    width: 85%;
+    border-radius: 10px;
+    border: none;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    color: #444C4F;
+}
+.form input:focus{
+    outline: none;
+}
+#submit-btn{
+    font-family: 'Quicksand', sans-serif;
+    padding: 10px;
+    color: white;
+    background: #72A4E5;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: 900;
+}
+#submit-btn:hover{
+    background: white;
+    color: #72A4E5;
+    cursor: pointer;
+}
+
+.MakeBorder{
+    opacity: 0.4;
+}
+
+/* container-2 */
+
+.container-2{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container-2 img{
+    width: 200px;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+#res{
+    font-size: 2rem;
+    font-weight: 700;
+    color: blueviolet;
+}
+#category{
+    font-size: 1.34rem;
+    font-weight: 900;
+    color: #5E758F;
+}
+#tip{
+    font-weight: 900;
+    letter-spacing: 4px;
+    color: #5E758F;
+}
+
+.border{
+    border-bottom: 2px solid #DCECFC;
+    padding: 25px;
+} 
+
+/* for desktop */
+
+@media screen and (max-width: 578px){
+    body{
+        font-size: 1rem;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .container-1,.container-2{
+        width: auto;
+        padding: 10px;
+    } 
+    .container-1 h1{
+        letter-spacing: 0;
+    }
+    .form {
+        width: auto;
+        margin-top: 5px;
+    }
+    #res{
+        font-size: 1.3rem;
+        color:#2B5CA5;
+    }
+}
