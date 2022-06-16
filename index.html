@@ -11,15 +11,15 @@
     <div class="container">
        <div class="container-1">
         <h1>Body Mass Index</h1>
-        <p>Select Gender</p>
-        <div class="btn">
-                <img src="/images/man.png" alt="man" class = "img" id = "male">
-                <img src="/images/woman.png" alt="" class = "img" id = "female" >
-        </div>
+        <select  id="Gender" name="gender">
+              <option value="" disabled selected hidden>select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
         <div class="form">
             <input type="text" id="height-field" placeholder="height / cm" required>
             <input type="text" id="weight-field" placeholder = "weight / kg" required> 
-            <button id = "submit-btn">Calculate BMI</button>
+            <button id = "submit-btn">Calculate BMI</button>    
         </div>
        </div> 
        <div class="container-2">

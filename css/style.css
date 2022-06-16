@@ -9,10 +9,6 @@ body{
     display: flex;
     height: 100vh;
 }
-.container-1 img{
-    width: 80px;
-
-}
 .container-1 {
     width: 50%;
     color: white;
@@ -22,16 +18,24 @@ body{
     flex-direction: column;
     text-align: center;
     gap: 10px;
+    box-shadow: 2px 5px 5px ;
 }
 .container-1 h1{
     letter-spacing: 15px;
     font-weight: 900;
     text-transform: uppercase;
 }
-.img{
-  margin: 20px;
-  background: none;
-  border: none;  
+
+select{
+    padding: 10px;
+    font-family: 'Quicksand', sans-serif;
+    border-radius: 10px;
+    border: none;
+    width: 150px;
+    margin: 20px;
+}
+select:focus{
+    outline: none;
 }
 .form{
     display: flex;
@@ -74,9 +78,6 @@ body{
     cursor: pointer;
 }
 
-.MakeBorder{
-    opacity: 0.4;
-}
 
 /* container-2 */
 
@@ -89,8 +90,10 @@ body{
     align-items: center;
     text-align: center;
 }
-.container-2 img{
-    width: 200px;
+
+.Img img{
+    margin-top: 20px;
+    width: 150px;
 }
 .result{
     display: flex;
@@ -119,23 +122,31 @@ body{
     padding: 25px;
 } 
 
-/* for desktop */
+/* for mobile*/
 
 @media screen and (max-width: 578px){
     body{
         font-size: 1rem;
     }
-
     .container{
         display: flex;
         flex-direction: column;
     }
     .container-1,.container-2{
         width: auto;
-        padding: 10px;
+        padding: 20px;
     } 
     .container-1 h1{
+        color: #2F589B;
         letter-spacing: 0;
+    }
+    .container-1 {
+        background: none;
+        margin: 1px;
+        box-shadow: 2px 5px 5px #DCE4F4;
+    }
+    select{
+        border: 2px solid #8BB4C8;
     }
     .form {
         width: auto;

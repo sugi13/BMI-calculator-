@@ -1,36 +1,34 @@
-let images = document.getElementsByClassName("img");
-
-let MaleButton = document.getElementById("male");
-let FemaleButton = document.getElementById("female");
-
 let submitButton = document.getElementById("submit-btn");
+let selectGender = document.querySelector("#Gender");
 
 let HeightField = document.getElementById("height-field");
 let WeightField = document.getElementById("weight-field");
-
 
 let result = document.querySelector('#res');
 let Category = document.getElementById("category");
 let HealthyTip = document.getElementById("tip");
 let GenderImage = document.querySelector(".Img");
 
-// for selecting gender //
+// fetching image//
 
-for (let i = 0; i < images.length; i++){
-    images[i].addEventListener("click", function(e){
-        if(e.target.src.match("images/man.png")){
-            FemaleButton.classList.add("MakeBorder");
-            MaleButton.classList.remove("MakeBorder");
-            GenderImage.appendChild(MaleButton);
+let ManImg = document.createElement("img");
+let FemaleImg = document.createElement("img");
+ManImg.src = "images/man.png";
+FemaleImg.src = "images/woman.png";
 
-        }
-        else if(e.target.src.match("images/woman.png")){
-          MaleButton.classList.add("MakeBorder");
-          GenderImage.appendChild(FemaleButton);
-        }
-    })
+// selecting Gender //
+
+function getGender(){
+    let inputValue = selectGender.value;
+    if(inputValue == "Male"){
+        GenderImage.appendChild(ManImg);
+        GenderImage.removeChild(FemaleImg);
+    }
+    else if(inputValue == "Female"){
+        GenderImage.appendChild(FemaleImg)
+        GenderImage.removeChild(ManImg);
+    }
 }
-
 
 // calculating BMI 
 function calculateBMI(){
@@ -52,18 +50,21 @@ function calculateBMI(){
         HealthyTip.classList.add("border");
     }
     else if(res < 25){
-        Category.innerHTML = "Your're Healthy!.."
-        HealthyTip.innerHTML = "Keep your workout habits";
+        Category.innerHTML = "You're Healthy!.."
+        HealthyTip.innerHTML = "Keep up your Healthy habits";
         Category.classList.add("border");
         HealthyTip.classList.add("border");
     }
     else if(res > 25){
-        alert("Never skip the GYM!");
+        Category.innerHTML = "You're OverWeighted!";
+        HealthyTip.innerHTML = "Don't worry about Fat. Let's burn!";
+        Category.classList.add("border");
+        HealthyTip.classList.add("border");
     }
 
-
-    HeightField.value = "";
-    WeightField.value = "";
 }
 
+// adding event listeners //
+
 submitButton.addEventListener("click", calculateBMI);
+selectGender.addEventListener("change", getGender)
